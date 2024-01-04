@@ -1,7 +1,7 @@
 # Language Modeling using Tree-Based Methods
 Final Project, MIT 15.095 - Machine Learning Under a Modern Optimization Lens
 
-<img src="https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/269e0a10-2c2a-4abe-ba10-d41d880eedda" width="600" />
+<img src="https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/269e0a10-2c2a-4abe-ba10-d41d880eedda" width="500" />
 
 ## Summary
 We find that tree-based methods such as XGBoost, Random Forest, CART and OCT can sometimes outperform neural networks on next character prediction while offering interpretability. This suggests that tree-based methods may be a viable alternative to neural networks for small to mid-sized language models.
