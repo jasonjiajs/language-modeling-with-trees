@@ -22,7 +22,9 @@ We used the cleaned Alpaca Dataset, a slightly modified version of the dataset u
 ### Preprocessing
 Our preprocessing involved the following key steps:
 - Tokens: We split sequences of concatenated instruction, input, and output by character, then take pairs of (10 consecutive characters, 11th character) as pairs of (X,Y).
-![image](https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/48300e54-7f19-4f5d-8119-b126e9e31f3c)
+
+<img src="https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/48300e54-7f19-4f5d-8119-b126e9e31f3c" width="400" />
+
 - We add an ‘[EOS]’ (End Of Sequence) token to the end of the sequence, which is the concatenation of the instruction, inputs and outputs. We include this so that at generation time, if a model generates an [EOS] token, this lets us know that the model is done generating an output.
 - One-hot encoding of characters: Each character is mapped to an index, and each character is converted to a vector using one-hot encoding. Each of these one-hot encoded vectors is concatenated to make a binary input vector of size (vocabulary size) * (context length)
 - Train/test split: We use an 80/20 train-test split.
