@@ -51,7 +51,7 @@ We use feedforward neural networks (FFNs) as our benchmark. We choose a straight
 2. 
 
 ## Impact and Conclusion
-- Our findings suggest that tree-based methods may be viewed as a viable alternative to neural network methods for next character prediction in small to medium sized datasets (<1M training examples).
+Our findings suggest that tree-based methods may be viewed as a viable alternative to neural network methods for next character prediction in small to medium sized datasets (<1M training examples).
 - CART models can be trained extremely quickly, and are interpretable, allowing us to inspect the reasons why the model predicted what it did. This could be a step toward alternative architectures of more interpretable mid-sized language models.
 - Our experiments indicate that more data produces better results, and there is no reason why the process couldn't scale to larger datasets. However, increasing the context lengths of these models may require significant amounts of data.
 
