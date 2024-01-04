@@ -48,7 +48,11 @@ We use feedforward neural networks (FFNs) as our benchmark. We choose a straight
 
 ![image](https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/2b14ad9d-28c8-4271-bcd1-a2db21cf88fb)
 
-2. 
+2. Tree-based methods are **interpretable** and can lend intuition to how predictions are made.
+
+For example, in the best performing CART model, the root node asks if the previous character is a comma, and if it is then the model predicts that the next character will be a space.
+
+<img width="1228" alt="image" src="https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/fea5d816-e2ef-43ed-ad8a-0c97007f6ac2">
 
 ## Impact and Conclusion
 Our findings suggest that tree-based methods may be viewed as a viable alternative to neural network methods for next character prediction in small to medium sized datasets (<1M training examples).
