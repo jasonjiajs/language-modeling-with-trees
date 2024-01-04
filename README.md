@@ -1,7 +1,5 @@
 # Language Modeling using Tree-Based Methods
-Final Project 
-
-MIT 15.095 - Machine Learning Under a Modern Optimization Lens
+Final Project, MIT 15.095 - Machine Learning Under a Modern Optimization Lens
 
 ## Summary
 
