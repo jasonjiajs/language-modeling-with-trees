@@ -2,7 +2,7 @@
 Final Project, MIT 15.095 - Machine Learning Under a Modern Optimization Lens
 
 ## Summary
-We find that tree-based methods such as XGBoost, Random Forest, CART and OCT can sometimes outperform neural networks on next character prediction while offering interpretability. This suggests that tree-based methods may serve as a viable alternative to neural networks for small to mid-sized language models.
+We find that tree-based methods such as XGBoost, Random Forest, CART and OCT can sometimes outperform neural networks on next character prediction while offering interpretability. This suggests that tree-based methods may be a viable alternative to neural networks for small to mid-sized language models.
 
 ## Problem and Motivation
 Neural networks are highly popular as models of choice for autoregressive language modeling (predicting the next token/character/word). However, they are computationally expensive to train.
