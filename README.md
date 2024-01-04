@@ -20,23 +20,26 @@ We used the cleaned Alpaca Dataset, a slightly modified version of the dataset u
 ## Methods
 
 ### Preprocessing
+Our preprocessing involved the following key steps:
+- Tokens: We split sequences of concatenated instruction, input, and output by character, then take pairs of (10 consecutive characters, 11th character) as pairs of (X,Y).
 ![image](https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/48300e54-7f19-4f5d-8119-b126e9e31f3c)
+- We add an ‘[EOS]’ (End Of Sequence) token to the end of the sequence, which is the concatenation of the instruction, inputs and outputs. We include this so that at generation time, if a model generates an [EOS] token, this lets us know that the model is done generating an output.
+- One-hot encoding of characters: Each character is mapped to an index, and each character is converted to a vector using one-hot encoding. Each of these one-hot encoded vectors is concatenated to make a binary input vector of size (vocabulary size) * (context length)
+- Train/test split: We use an 80/20 train-test split.
 
-• Tree-BasedMethods
-Tokenization: individual characters
-'h','e','l','l','o',' ','w','o','r','l' 'd'
-• CART, Random Forest, XGBoost
-• NeuralNetworkMethods(Benchmark)
-Context length for all models is the previous 10 characters
-One-hot encoded vectors:
-0 14 32] 14 [0,...,1,...0]
-Target
-• Feedforward Neural Networks
-• Evaluation
-• Training and Test Accuracy
-• Training Time
-• Interpretability
+### Tree-Based Methods
+We tested several tree-based methods for autoregressive language modeling, including:
+- CART
+- XGBoost
+- Random Forest
 
+### Neural Network Methods(Benchmark)
+We use feedforward neural networks (FFNs) as our benchmark. We choose a straightforward model architecture comprising an input layer, a hidden layer and an output layer. Here, embedding size is the number of rows of the weight matrix representing the hidden layer. The input to this model is the one-hot encoded context vector, which is the same input as the tree-based methods receive and makes results more comparable between methods.
+
+### Evaluation
+- Training and Test Accuracy
+- Training Time
+- Interpretability
 
 ## Key Findings
 Tree-based methods can sometimes **outperform** neural networks in next character prediction for the dataset sizes we trained on.
