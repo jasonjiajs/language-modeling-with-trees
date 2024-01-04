@@ -35,7 +35,7 @@ We tested several tree-based methods for autoregressive language modeling, inclu
 - XGBoost
 - Random Forest
 
-### Neural Network Methods(Benchmark)
+### Neural Network Methods (Benchmark)
 We use feedforward neural networks (FFNs) as our benchmark. We choose a straightforward model architecture comprising an input layer, a hidden layer and an output layer. Here, embedding size is the number of rows of the weight matrix representing the hidden layer. The input to this model is the one-hot encoded context vector, which is the same input as the tree-based methods receive and makes results more comparable between methods.
 
 ### Evaluation
@@ -44,7 +44,14 @@ We use feedforward neural networks (FFNs) as our benchmark. We choose a straight
 - Interpretability
 
 ## Key Findings
-Tree-based methods can sometimes **outperform** neural networks in next character prediction for the dataset sizes we trained on.
+1. Tree-based methods can sometimes **outperform** neural networks in next character prediction for the dataset sizes we trained on.
 
 ![image](https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/2b14ad9d-28c8-4271-bcd1-a2db21cf88fb)
+
+2. 
+
+## Impact and Conclusion
+- Our findings suggest that tree-based methods may be viewed as a viable alternative to neural network methods for next character prediction in small to medium sized datasets (<1M training examples).
+- CART models can be trained extremely quickly, and are interpretable, allowing us to inspect the reasons why the model predicted what it did. This could be a step toward alternative architectures of more interpretable mid-sized language models.
+- Our experiments indicate that more data produces better results, and there is no reason why the process couldn't scale to larger datasets. However, increasing the context lengths of these models may require significant amounts of data.
 
