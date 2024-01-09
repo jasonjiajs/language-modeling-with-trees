@@ -1,5 +1,6 @@
 # Language Modeling using Tree-Based Methods
-Final Project, MIT 15.095 - Machine Learning Under a Modern Optimization Lens
+Final Project, MIT 15.095 - Machine Learning Under a Modern Optimization Lens <br>
+Team Members: [Seth Chatteron](https://www.linkedin.com/in/seth-chatterton/), [Jason Jia](https://www.linkedin.com/in/jasonjiajs/)
 
 <img src="https://github.com/jasonjiajs/15.095_ml_under_a_modern_optimization_lens/assets/90637415/269e0a10-2c2a-4abe-ba10-d41d880eedda" width="550" />
 
